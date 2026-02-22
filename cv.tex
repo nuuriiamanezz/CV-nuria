@@ -100,26 +100,26 @@
 
 % job listing environments
 \newenvironment{jobshort}[2]
-    {
-    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+{
+  \begin{tabularx}{\linewidth}{@{}l X r@{}}
     \textbf{#1} & \hfill &  #2 \\[3.75pt]
-    \end{tabularx}
-    }
-    {
-    }
+  \end{tabularx}
+}
+{
+}
 
 \newenvironment{joblong}[2]
-    {
-    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+{
+  \begin{tabularx}{\linewidth}{@{}l X r@{}}
     \textbf{#1} & \hfill &  #2 \\[3.75pt]
-    \end{tabularx}
-    \begin{minipage}[t]{\linewidth}
+  \end{tabularx}
+  \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
-    }
-    {
+      }
+      {
     \end{itemize}
-    \end{minipage}
-    }
+  \end{minipage}
+}
 
 % Required packages
 \usepackage{tikz}
@@ -131,150 +131,150 @@
 % The tag command
 \newcommand{\cvtag}[1]{%
   \tikz[baseline=(temp.base)]
-    \node[
-      anchor=base,
-      draw=gray!20,      % Border color
-      fill=tagbg,        % Background color
-      rounded corners=2pt,
-      inner xsep=3pt,    % Horizontal padding
-      inner ysep=1pt,    % Vertical padding
-      minimum height=1.2em,
-      text depth=0pt,
-      alias=temp
-    ] {\scriptsize #1};% % Font size
-}
+  \node[
+    anchor=base,
+    draw=gray!20,      % Border color
+    fill=tagbg,        % Background color
+    rounded corners=2pt,
+    inner xsep=3pt,    % Horizontal padding
+    inner ysep=1pt,    % Vertical padding
+    minimum height=1.2em,
+    text depth=0pt,
+    alias=temp
+  ] {\scriptsize #1};% % Font size
+  }
 
-% \newcommand{\cvtag}[1]{%
-%   \tikz[baseline=(temp.base)]
-%     \node[
-%       anchor=base,
-%       draw=gray!20,
-%       fill=tagbg,
-%       rounded corners=2pt,
-%       inner xsep=3pt,
-%       inner ysep=1pt,    % Reduced padding
-%       line width=0.5pt,  % Thinner border
-%       text height=1.5ex, % Enforce consistent height
-%       text depth=0.25ex, % Enforce consistent depth
-%       alias=temp
-%     ] {\scriptsize #1};%
-% }
-
-
-%----------------------------------------------------------------------------------------
-%	BEGIN DOCUMENT
-%----------------------------------------------------------------------------------------
-\begin{document}
-
-% non-numbered pages
-\pagestyle{empty}
-
-%----------------------------------------------------------------------------------------
-%	TITLE
-%----------------------------------------------------------------------------------------
-
-% \begin{tabularx}{\linewidth}{ @{}X X@{} }
-% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
-% \raisebox{-0.05\height}\faGithub\ username \ | \
-% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
-% \end{tabularx}
-
-\begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Test} \\[7.5pt]
-\href{https://github.com/username}{\raisebox{-0.05\height}\faGithub\ username} \ $|$ \
-\href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ username} \ $|$ \
-\href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \
-\href{mailto:email@mysite.com}{\raisebox{-0.05\height}\faEnvelope \ email@mysite.com} \ $|$ \
-\href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +00.00.000.000} \\
-\end{tabularx}
-
-%----------------------------------------------------------------------------------------
-% EXPERIENCE SECTIONS
-%----------------------------------------------------------------------------------------
-
-%Interests/ Keywords/ Summary
-\section{Summary}
-This CV can also be automatically complied and published using GitHub Actions. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
-
-%Experience
-\section{Work Experience}
-
-\begin{jobshort}{Designation}{Jan 2021 - present}
-long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width
-\end{jobshort}
+  % \newcommand{\cvtag}[1]{%
+  %   \tikz[baseline=(temp.base)]
+  %     \node[
+  %       anchor=base,
+  %       draw=gray!20,
+  %       fill=tagbg,
+  %       rounded corners=2pt,
+  %       inner xsep=3pt,
+  %       inner ysep=1pt,    % Reduced padding
+  %       line width=0.5pt,  % Thinner border
+  %       text height=1.5ex, % Enforce consistent height
+  %       text depth=0.25ex, % Enforce consistent depth
+  %       alias=temp
+  %     ] {\scriptsize #1};%
+  % }
 
 
-\begin{joblong}{Designation}{Mar 2019 - Jan 2021}
-\item long long line of blah blah that will wrap when the table fills the column width
-\item again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
-\end{joblong}
+  %----------------------------------------------------------------------------------------
+  %	BEGIN DOCUMENT
+  %----------------------------------------------------------------------------------------
+  \begin{document}
 
-%Projects
-\section{Projects}
+  % non-numbered pages
+  \pagestyle{empty}
 
-%TODO: Clean up the Projects formatting to be clearer? And maybe also abstract this into environments?
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Project Style 1} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
-\multicolumn{2}{@{}p{\linewidth}@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
-\end{tabularx}
+  %----------------------------------------------------------------------------------------
+  %	TITLE
+  %----------------------------------------------------------------------------------------
 
-\begin{tabularx}{\linewidth}{ @{}X r@{} }
-  \href{https://github.com/path/to/repo}{\textbf{Project Style 2}} &\cvtag{C++} \cvtag{CUDA} \cvtag{\faGithub\ 120 Stars} \cvtag{\faPython\ Python} \\[3.75pt]
-  \multicolumn{2}{@{}p{\linewidth}@{}}{%
-    \begin{minipage}[t]{\linewidth}
-      \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
-        \item long long line of blah blah that will wrap when the table fills the column width
-        \item long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width
-      \end{itemize}
-    \end{minipage}
-    } \\
-\end{tabularx}
+  % \begin{tabularx}{\linewidth}{ @{}X X@{} }
+  % \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+  % \raisebox{-0.05\height}\faGithub\ username \ | \
+  % \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+  % \end{tabularx}
 
-\begin{tabularx}{\linewidth}{@{}l r@{} }
-\textbf{Project Style 3} & \href{https://link.com}{Link to Demo} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{%
-long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width} \\[3.75pt]
+  \begin{tabularx}{\linewidth}{@{} C @{}}
+    \Huge{Test} \\[7.5pt]
+    \href{https://github.com/username}{\raisebox{-0.05\height}\faGithub\ username} \ $|$ \
+    \href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ username} \ $|$ \
+    \href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \
+    \href{mailto:email@mysite.com}{\raisebox{-0.05\height}\faEnvelope \ email@mysite.com} \ $|$ \
+    \href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +00.00.000.000} \\
+  \end{tabularx}
 
-% Tags at the bottom, slightly offset or lighter
-\multicolumn{2}{@{}X@{}}{%
-\footnotesize \textit{Stack:} \cvtag{Python} \cvtag{NumPy} \cvtag{Matplotlib}
-} \\
-\end{tabularx}
+  %----------------------------------------------------------------------------------------
+  % EXPERIENCE SECTIONS
+  %----------------------------------------------------------------------------------------
+
+  %Interests/ Keywords/ Summary
+  \section{Summary}
+  This CV can also be automatically complied and published using GitHub Actions. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
+
+  %Experience
+  \section{Work Experience}
+
+  \begin{jobshort}{Designation}{Jan 2021 - present}
+    long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width
+  \end{jobshort}
 
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-\section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-2030 - present & PhD (Subject) at \textbf{University} \hfill \normalsize (GPA: 4.0/4.0) \\
+  \begin{joblong}{Designation}{Mar 2019 - Jan 2021}
+  \item long long line of blah blah that will wrap when the table fills the column width
+  \item again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
+  \end{joblong}
 
-2023 - 2027 & Bachelor's Degree at \textbf{College} \hfill (GPA: 4.0/4.0) \\
+  %Projects
+  \section{Projects}
 
-2022 & Class 12th Some Board \hfill  (Grades) \\
+  %TODO: Clean up the Projects formatting to be clearer? And maybe also abstract this into environments?
+  \begin{tabularx}{\linewidth}{ @{}l r@{} }
+    \textbf{Project Style 1} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
+    \multicolumn{2}{@{}p{\linewidth}@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
+  \end{tabularx}
 
-2021 & Class 10th Some Board \hfill  (Grades) \\
-\end{tabularx}
+  \begin{tabularx}{\linewidth}{ @{}X r@{} }
+    \href{https://github.com/path/to/repo}{\textbf{Project Style 2}} &\cvtag{C++} \cvtag{CUDA} \cvtag{\faGithub\ 120 Stars} \cvtag{\faPython\ Python} \\[3.75pt]
+    \multicolumn{2}{@{}p{\linewidth}@{}}{%
+      \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+          \item long long line of blah blah that will wrap when the table fills the column width
+          \item long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width
+        \end{itemize}
+      \end{minipage}
+      } \\
+  \end{tabularx}
 
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS
-%----------------------------------------------------------------------------------------
-\section{Publications}
-\begin{refsection}[citations.bib]
-\nocite{*}
-\printbibliography[heading=none]
-\end{refsection}
+  \begin{tabularx}{\linewidth}{@{}l r@{} }
+    \textbf{Project Style 3} & \href{https://link.com}{Link to Demo} \\[3.75pt]
+    \multicolumn{2}{@{}X@{}}{%
+      long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width} \\[3.75pt]
 
-%----------------------------------------------------------------------------------------
-%	SKILLS
-%----------------------------------------------------------------------------------------
-\section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
-Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\
-\end{tabularx}
+      % Tags at the bottom, slightly offset or lighter
+      \multicolumn{2}{@{}X@{}}{%
+        \footnotesize \textit{Stack:} \cvtag{Python} \cvtag{NumPy} \cvtag{Matplotlib}
+        } \\
+  \end{tabularx}
 
-\vfill
-\center{\footnotesize Last updated: \today}
+
+  %----------------------------------------------------------------------------------------
+  %	EDUCATION
+  %----------------------------------------------------------------------------------------
+  \section{Education}
+  \begin{tabularx}{\linewidth}{@{}l X@{}}
+    2030 - present & PhD (Subject) at \textbf{University} \hfill \normalsize (GPA: 4.0/4.0) \\
+
+    2023 - 2027 & Bachelor's Degree at \textbf{College} \hfill (GPA: 4.0/4.0) \\
+
+    2022 & Class 12th Some Board \hfill  (Grades) \\
+
+    2021 & Class 10th Some Board \hfill  (Grades) \\
+  \end{tabularx}
+
+  %----------------------------------------------------------------------------------------
+  %	PUBLICATIONS
+  %----------------------------------------------------------------------------------------
+  \section{Publications}
+  \begin{refsection}[citations.bib]
+    \nocite{*}
+    \printbibliography[heading=none]
+  \end{refsection}
+
+  %----------------------------------------------------------------------------------------
+  %	SKILLS
+  %----------------------------------------------------------------------------------------
+  \section{Skills}
+  \begin{tabularx}{\linewidth}{@{}l X@{}}
+    Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
+    Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\
+  \end{tabularx}
+
+  \vfill
+  \center{\footnotesize Last updated: \today}
 
 \end{document}
